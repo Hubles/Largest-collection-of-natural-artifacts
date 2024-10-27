@@ -1,0 +1,248 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Open-Sans";
+  src: url(../fonts/OpenSansCondensed-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: url(../fonts/OpenSansCondensed-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url(../fonts/Cormorant-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url(../fonts/Cormorant-BoldItalic.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+._container {
+  max-width: calc(var(--container-width) + var(--container-padding) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+@media (width < 767px) {
+  ._hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 768px) {
+  ._visible-mobile {
+    display: none;
+  }
+}
+
+body {
+  font-family: var(--font-family-fortext);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--color-dark-grey);
+}
+
+a,
+button,
+svg *,
+input,
+textarea {
+  transition-duration: var(--transition-duration);
+  font-family: inherit;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+button {
+  background: transparent;
+}
+
+:root {
+  --color-dark-grey: #1D2F30 ;
+  --color-grey: #899D9D;
+  --color-accent: #BAE249;
+  --color-dark-accent: #688B05;
+  --color-light: #FFFFFF;
+  --color-green: #91AC46;
+  --font-family-fortext: "Open-Sans", sans-serif;
+  --font-family-fortitle: "Cormorant", sans-serif;
+  --container-width: 1110px;
+  --container-padding: 32px;
+  --input-height: 45px;
+  --button-height: 45px;
+  --transition-duration: .2s;
+}
+
+.header {
+  padding-block: 18px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 125px;
+       column-gap: 125px;
+}
+.header__nav {
+  margin-right: auto;
+}
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 64px;
+       column-gap: 64px;
+}
+.header__nav-item {
+  color: #fff;
+}
+@media (hover: hover) {
+  .header__nav-item:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .header__nav-item:active {
+    color: var(--color-accent);
+  }
+}
+.header__nav-item:active {
+  color: var(--color-dark-accent);
+}
+.header__buttons {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 64px;
+       column-gap: 64px;
+}
+.header-button {
+  color: var(--color-accent);
+}
+@media (hover: hover) {
+  .header-button:hover {
+    color: var(--color-green);
+  }
+}
+@media (hover: none) {
+  .header-button:active {
+    color: var(--color-green);
+  }
+}
+.header-button:active {
+  color: var(--color-dark-accent);
+}/*# sourceMappingURL=main.css.map */

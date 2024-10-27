@@ -1,0 +1,34 @@
+body {
+  font-family: var(--font-family-fortext);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background-color: var(--color-dark-grey);
+}
+
+a,
+button,
+svg *,
+input,
+textarea {
+  transition-duration: var(--transition-duration);
+  font-family: inherit;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+ svg *[fill] { fill: currentColor }
+ svg *[stroke] { stroke: currentColor }
+ 
+ /**
+   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+  */
+ svg * {
+   transition-property: fill, stroke;
+ }
+
+button {
+  background: transparent;
+}

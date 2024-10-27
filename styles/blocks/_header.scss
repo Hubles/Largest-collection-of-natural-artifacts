@@ -1,0 +1,51 @@
+.header {
+  padding-block: 18px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 125px;
+  }
+
+  &__nav {
+    margin-right: auto;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 64px;
+  }
+
+  &__nav-item {
+    color: #fff;
+    
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-dark-accent);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 64px;
+  }
+
+  &-button {
+    color: var(--color-accent);
+
+    @include hover {
+      color: var(--color-green);
+    }
+
+    &:active {
+      color: var(--color-dark-accent);
+    }
+  }
+}

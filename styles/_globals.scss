@@ -1,3 +1,7 @@
+* {
+  transition: var(--transition-duration) linear;
+}
+
 body {
   font-family: var(--font-family-fortext);
   font-size: 16px;
@@ -14,6 +18,10 @@ input,
 textarea {
   transition-duration: var(--transition-duration);
   font-family: inherit;
+}
+
+a {
+  font-size: inherit;
 }
 
 /**

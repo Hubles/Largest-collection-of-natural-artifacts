@@ -12,6 +12,6 @@
 
 ._visible-mobile {
   @include mobile-above {
-    display: none;
+    display: none !important;
   }
 }

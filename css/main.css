@@ -196,6 +196,32 @@ button {
   --transition-duration: .2s;
 }
 
+.arrow {
+  width: 43px;
+  height: 2px;
+  background-color: currentColor;
+  position: relative;
+  transition: 0.1s;
+}
+.arrow::before, .arrow::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  background-color: currentColor;
+  height: 2px;
+  width: 9px;
+  transform-origin: right;
+  border-radius: 8px;
+}
+.arrow::before {
+  transform: rotate(45deg);
+  bottom: -1px;
+}
+.arrow::after {
+  transform: rotate(-45deg);
+  bottom: 1px;
+}
+
 .header {
   padding-block: 18px;
 }
@@ -314,13 +340,13 @@ button {
 .header-burger span {
   width: 75%;
   background-color: var(--color-accent);
-  height: 1px;
+  height: 2px;
 }
 .header-burger span:before, .header-burger span:after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: var(--color-accent);
 }
 .header-burger span:before {
@@ -353,6 +379,77 @@ button {
 }
 .header-burger-close::after {
   transform: rotate(-45deg);
+}
+
+.section-with-first-bg {
+  padding-block: 115px;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-first-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -60px;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.dark-bg {
+  width: 100vw;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.first-bg__body {
+  color: #fff;
+  z-index: 10;
+}
+.first-bg__body-title {
+  font-family: var(--font-family-fortitle);
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.first-bg__body-discription {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.first-bg__body-button {
+  color: var(--color-accent);
+  transition: 0.1s;
+}
+.first-bg__body-button a {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  transition: 0.1s;
+}
+@media (hover: hover) {
+  .first-bg__body-button:hover {
+    color: var(--color-dark-accent);
+  }
+  .first-bg__body-button:hover a div {
+    width: 53px;
+  }
+}
+@media (hover: none) {
+  .first-bg__body-button:active {
+    color: var(--color-dark-accent);
+  }
+  .first-bg__body-button:active a div {
+    width: 53px;
+  }
 }
 
 .active {

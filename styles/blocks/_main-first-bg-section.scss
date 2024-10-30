@@ -54,12 +54,6 @@
       transition: .1s;
     }
 
-    @include hover {
-      color: var(--color-dark-accent);
-
-      a div {
-        width: 53px;
-      }
-    }
+    
   }
 }

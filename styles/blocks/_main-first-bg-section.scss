@@ -2,11 +2,16 @@
   padding-block: 115px;
   overflow: hidden;
   position: relative;
+
+  @include mobile {
+    padding-block: 100px;
+  }
 }
 
 .section-first-bg {
   position: absolute;
   width: 100%;
+  height: 100%;
   left: 0;
   top: -60px;
   opacity: 0.6;
@@ -30,17 +35,18 @@
 
   &-title {
     font-family: var(--font-family-fortitle);
-    font-size: 60px;
     line-height: 1;
     font-weight: 700;
     margin-bottom: 16px;
+
+    @include fluid-text(48, 60)
   }
 
   &-discription {
-    font-size: 16px;
     line-height: 1.6;
     font-weight: 400;
     margin-bottom: 24px;
+    @include fluid-text(12, 16);    
   }
 
   &-button {
@@ -52,8 +58,25 @@
       align-items: center;
       column-gap: 8px;
       transition: .1s;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: calc(22 / 16);
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
-    
+    @include hover {
+      color: var(--color-green);
+
+      a div {
+        width: 53px;
+      }
+    }
+
+    &:active {
+      color: var(--color-dark-accent);
+    }
   }
 }

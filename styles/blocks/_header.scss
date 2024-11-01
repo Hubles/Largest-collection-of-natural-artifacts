@@ -10,6 +10,10 @@
     @include tablet {
       column-gap: 100px;
     }
+
+    @include mobile {
+      column-gap: 0;
+    }
   }
 
   &__nav {

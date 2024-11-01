@@ -1,8 +1,10 @@
-$desktop-above: 1280px;
+$desktop: 1280px;
 
 $tablet: 1024px;
 
 $mobile: 768px;
+
+$small-mobile: 425px;
 
 
 @mixin desktop {
@@ -22,6 +24,18 @@ $mobile: 768px;
     & {
       @content;
     }
+  }
+}
+
+@mixin modile-small {
+  @media (width < $mobile-small) {
+    @content
+  }
+}
+
+@mixin modile-small-above {
+  @media (width >= $mobile-small) {
+    @content
   }
 }
 

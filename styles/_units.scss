@@ -15,3 +15,9 @@
     display: none !important;
   }
 }
+
+._visible-small-mobile {
+  @include mobile-small-above {
+    display: none !important;
+  }
+}

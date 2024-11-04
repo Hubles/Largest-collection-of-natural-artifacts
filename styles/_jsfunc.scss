@@ -1,3 +1,23 @@
 .active {
   top: 0;
 }
+
+.visible {
+  background-color: var(--color-accent);
+}
+
+.slideFc1 {
+  left: -26%;
+
+  @include mobile-small {
+    left: 12%;
+  }
+}
+
+.slideFc2 {
+  left: -12%;
+}
+
+.slideFc3 {
+  left: -39%;
+}

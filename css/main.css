@@ -133,6 +133,12 @@ h6 {
   }
 }
 
+@media (width >= 425px) {
+  ._visible-small-mobile {
+    display: none !important;
+  }
+}
+
 * {
   transition: var(--transition-duration) linear;
 }
@@ -142,6 +148,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  color: #ffffff;
   background-color: var(--color-dark-grey);
 }
 
@@ -187,6 +194,7 @@ button {
   --color-dark-accent: #688B05;
   --color-light: #FFFFFF;
   --color-green: #91AC46;
+  --color-dark: #0B1919;
   --font-family-fortext: "Open-Sans", sans-serif;
   --font-family-fortitle: "Cormorant", sans-serif;
   --container-width: 1110px;
@@ -194,6 +202,7 @@ button {
   --input-height: 45px;
   --button-height: 45px;
   --transition-duration: .2s;
+  --border-card: 1px solid #0B1919;
 }
 
 .arrow {
@@ -403,8 +412,8 @@ button {
   width: 100%;
   height: 100%;
   left: 0;
-  top: -60px;
-  opacity: 0.6;
+  top: 0;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -439,6 +448,7 @@ button {
 .first-bg__body-button {
   color: var(--color-accent);
   transition: 0.1s;
+  display: inline-block;
 }
 .first-bg__body-button a {
   display: flex;
@@ -475,6 +485,148 @@ button {
   color: var(--color-dark-accent);
 }
 
+.section__plants {
+  padding-block: 60px;
+}
+
+.plants__container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.plants__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+@media (width < 768px) {
+  .plants__list {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+.plants__list-card {
+  border: var(--border-card);
+  height: 493px;
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateX(2%);
+}
+@media (width < 425px) {
+  .plants__list-card {
+    left: 39%;
+  }
+}
+@media (width < 768px) {
+  .plants__list-card {
+    height: 470px;
+    left: 25%;
+  }
+}
+.plants__list-card-body {
+  padding: 16px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+.plants__list-card-body-title {
+  font-family: var(--font-family-fortitle);
+  font-size: 24px;
+  line-height: 1.5;
+}
+@media (width < 768px) {
+  .plants__list-card-body-title {
+    font-size: 20px;
+  }
+}
+.plants__list-card-body-discription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-grey);
+}
+@media (width < 768px) {
+  .plants__list-card-body-discription {
+    font-size: 14px;
+  }
+}
+.plants__list-card-body-button {
+  color: var(--color-accent);
+  border: solid 1px var(--color-accent);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 11px 29px;
+  margin-top: auto;
+}
+.plants__list-item-image {
+  background-color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+.plants__list-item-image:before {
+  content: "2.4";
+  color: var(--color-grey);
+  font-family: var(--font-family-fortitle);
+  font-size: 16px;
+  line-height: 1.25;
+  border: 1px solid var(--color-grey);
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+.slide-dots {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.slide-dots-dot {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+}
+
 .active {
   top: 0;
+}
+
+.visible {
+  background-color: var(--color-accent);
+}
+
+.slideFc1 {
+  left: -26%;
+}
+@media (width < 425px) {
+  .slideFc1 {
+    left: 12%;
+  }
+}
+
+.slideFc2 {
+  left: -12%;
+}
+
+.slideFc3 {
+  left: -39%;
 }/*# sourceMappingURL=main.css.map */

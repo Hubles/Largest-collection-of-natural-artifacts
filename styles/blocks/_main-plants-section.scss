@@ -1,0 +1,123 @@
+.section__plants {
+  padding-block: 60px;
+}
+
+.plants__container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.plants__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  @include mobile {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+
+  &-card {
+    border: var(--border-card);
+    height: 493px;
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateX(2%);
+
+    @include mobile-small {
+      left: 39%;
+    }
+
+    @include mobile {
+      height: 470px;
+      left: 25%;
+    }
+
+    &-body {
+      padding: 16px;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: start;
+
+      &-title {
+        font-family: var(--font-family-fortitle);
+        font-size: 24px;
+        line-height: 1.5;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      &-discription {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-grey);
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+
+      &-button {
+        color: var(--color-accent);
+        border: solid 1px var(--color-accent);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 11px 29px; 
+        margin-top: auto;
+      }
+    }
+  }
+
+  &-item-image {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+
+    &:before {
+      content: '2.4';
+      color: var(--color-grey);
+      font-family: var(--font-family-fortitle);
+      font-size: 16px;
+      line-height: calc(20 / 16);
+      border: 1px solid var(--color-grey);
+      border-radius: 50%;
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      @include squere(24px)
+    }
+  }
+}
+
+.slide-dots {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+
+  &-dot {
+    @include squere(10px);
+
+    border-radius: 50%; 
+    background-color: var(--color-dark);  
+  }
+}

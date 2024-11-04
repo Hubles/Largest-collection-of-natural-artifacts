@@ -32,13 +32,13 @@
     position: relative;
     transform: translateX(2%);
 
-    @include mobile-small {
-      left: 39%;
-    }
-
     @include mobile {
       height: 470px;
       left: 25%;
+    }
+
+    @include mobile-small {
+      left: 39%;
     }
 
     &-body {
@@ -77,6 +77,19 @@
         line-height: 1.5;
         padding: 11px 29px; 
         margin-top: auto;
+
+        
+
+        @include hover {
+          background-color: var(--color-accent);
+          color: var(--color-dark);
+        } 
+        
+        &:active {
+          border-color: var(--color-dark-accent);
+          background-color: var(--color-dark-accent);
+          color: var(--color-dark);
+        }
       }
     }
   }

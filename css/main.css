@@ -519,15 +519,15 @@ button {
   position: relative;
   transform: translateX(2%);
 }
-@media (width < 425px) {
-  .plants__list-card {
-    left: 39%;
-  }
-}
 @media (width < 768px) {
   .plants__list-card {
     height: 470px;
     left: 25%;
+  }
+}
+@media (width < 425px) {
+  .plants__list-card {
+    left: 39%;
   }
 }
 .plants__list-card-body {
@@ -566,6 +566,23 @@ button {
   line-height: 1.5;
   padding: 11px 29px;
   margin-top: auto;
+}
+@media (hover: hover) {
+  .plants__list-card-body-button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+  }
+}
+@media (hover: none) {
+  .plants__list-card-body-button:active {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+  }
+}
+.plants__list-card-body-button:active {
+  border-color: var(--color-dark-accent);
+  background-color: var(--color-dark-accent);
+  color: var(--color-dark);
 }
 .plants__list-item-image {
   background-color: var(--color-dark);

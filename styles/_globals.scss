@@ -41,3 +41,33 @@ a {
 button {
   background: transparent;
 }
+
+.button {
+  transition: .1s;
+  display: inline-block;
+  
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    transition: .1s;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: calc(22 / 16);
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  @include hover {
+
+    a div {
+      width: 53px;
+    }
+  }
+
+  &:active {
+    color: var(--color-dark-accent);
+  }
+}

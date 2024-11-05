@@ -1,0 +1,88 @@
+.section__help-project {
+  padding-block: 60px;
+  position: relative;
+}
+
+.second-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  z-index: -1;
+
+  @include mobile-small {
+    display: none;
+  }
+}
+
+.help__project {
+  
+
+  &-title {
+    @include fluid-text(36, 48);
+    line-height: 1;
+    font-family: var(--font-family-fortitle);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  &-discription {
+    @include fluid-text(12, 16);
+    line-height: 1.5;
+    margin-bottom: 24px;
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &-form{ 
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 24px;
+    }
+
+    &-input {
+      display: block;
+      width: 350px;
+      padding-block: 10.5px;
+      padding-inline: 16px;
+      @include fluid-text(14, 16);
+      line-height: 1.5;
+      outline-offset: 2px;
+
+      &:focus {
+        outline: 1px solid var(--color-active-border);
+      }
+
+      @include mobile-small {
+        width: 100%;
+      }
+
+      &::placeholder {
+        color: var(--color-grey);
+      }
+
+      @include hover {
+        background-color: var(--color-grey);
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+
+    &-button {
+      color: var(--color-dark);
+      font-size: 16px;
+      line-height: calc(22 / 16);
+      font-weight: 700;
+      padding: 11px 26px;
+      background-color: var(--color-accent);
+    }
+  }  
+}
